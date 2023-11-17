@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nutrition Information</title>
+    <!-- Add any additional head elements here -->
+</head>
+<body>
+    <h1>Nutrition Information</h1>
+
+    <!-- Form for user input -->
+    <form method="post" action="{{ url_for('get_nutrition') }}">
+        <label for="user_query">Enter food item:</label>
+        <input type="text" id="user_query" name="user_query" required value="{{ request.form.get('user_query', '') }}">
+        <button type="submit">Get Nutrition Info</button>
+    </form>
+
+    <!-- Display nutrition data here -->
+    {% if foods %}
+    <div>
+        <h2>Nutrition Data</h2>
+        <ul>
+            {% for food in foods %}
+                <li>{{ food.food_name }}: 
+                    Calories: {{ food.nf_calories }}, 
+                    Total Fat: {{ food.nf_total_fat }}g, 
+                    Protein: {{ food.nf_protein }}g
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
+<a href="/">Back to Home</a>
+</body>
+</html>
+
+

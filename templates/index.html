@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Wellness Hub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Welcome to the Food Wellness Hub</h1>
+    <p>Your guide to healthy eating habits and nutritional wellness.</p>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('food_groups') }}">Food Groups</a></li>
+            <li><a href="{{ url_for('diet_types') }}">Diet Types</a></li>
+            <li><a href="{{ url_for('eating_schedules') }}">Eating Schedules</a></li>
+            <li><a href="{{ url_for('nutrition_info') }}">Nutrition Information</a></li>
+        </ul>
+    </nav>
+
+
+
+</body>
+</html>
