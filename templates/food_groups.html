@@ -4,44 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <title>Food Groups Overview</title>
-    <!-- Link to your CSS file for styling -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/food_groups.css') }}">
 </head>
 <body>
-    <h1>Explore Food Groups</h1>
-    <p>Understanding food groups is essential for maintaining a balanced diet. Here's an overview of the primary food groups and some examples of foods that belong to each.</p>
+    <h1 class="explore-food-groups">Explore Food Groups</h1>
+    <p class="explore-food-groups-paragraph">Understanding food groups is essential for maintaining a balanced diet. Here's an overview of the primary food groups and some examples of foods that belong to each.</p>
 
     <div class="food-group">
-        <h2>Fruits</h2>
-        <p>Fruits are a rich source of essential vitamins, minerals, and fiber. Include a variety of fruits in your diet such as apples, bananas, berries, and citrus fruits.</p>
+        <h2 class="fruits-header">Fruits</h2>
+        <img src="https://cdn-prod.medicalnewstoday.com/content/images/articles/325/325253/assortment-of-fruits.jpg" class="responsive-image">
+        <p class="fruits-paragraph">Fruits are a rich source of essential vitamins, minerals, and fiber. Include a variety of fruits in your diet such as apples, bananas, berries, and citrus fruits.</p>
     </div>
 
     <div class="food-group">
-        <h2>Vegetables</h2>
-        <p>Vegetables are packed with nutrients including potassium, dietary fiber, folate, vitamin A, and vitamin C. Eat a mix of different vegetables every day, like leafy greens, carrots, and bell peppers.</p>
+        <h2 class="vegetables-header">Vegetables</h2>
+        <img src="https://parade.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTkwNTgxMzY3MTIzMjIzNjc3/healthiest-vegetables-jpg.jpg" class="responsive-image">
+        <p class="vegetables-paragraph">Vegetables are packed with nutrients including potassium, dietary fiber, folate, vitamin A, and vitamin C. Eat a mix of different vegetables every day, like leafy greens, carrots, and bell peppers.</p>
     </div>
 
     <div class="food-group">
-        <h2>Grains</h2>
-        <p>Grains are divided into two subgroups: whole grains and refined grains. Whole grains contain the entire grain kernel and are more nutritious. Include items like whole wheat bread, brown rice, and quinoa in your meals.</p>
+        <h2 class="grains-header">Grains</h2>
+        <img src="https://health.clevelandclinic.org/wp-content/uploads/sites/3/2013/07/wholeGrainProducts-842797430-770x533-1-650x428.jpg" class="responsive-image">
+        <p class="grains-paragraph">Grains are divided into two subgroups: whole grains and refined grains. Whole grains contain the entire grain kernel and are more nutritious. Include items like whole wheat bread, brown rice, and quinoa in your meals.</p>
     </div>
 
     <div class="food-group">
-        <h2>Proteins</h2>
-        <p>Proteins are crucial for building and repairing tissues in your body. They can be found in poultry, lean meats, seafood, eggs, beans, and nuts.</p>
+        <h2 class="proteins-header">Proteins</h2>
+        <img src="https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_1440,f_auto/MA_00822496_d4wopy.jpg" class="responsive-image">
+        <p class="proteins-paragraph">Proteins are crucial for building and repairing tissues in your body. They can be found in poultry, lean meats, seafood, eggs, beans, and nuts.</p>
     </div>
 
     <div class="food-group">
-        <h2>Dairy</h2>
-        <p>Dairy products provide calcium, vitamin D, and other essential nutrients. They include milk, cheese, yogurt, and fortified soy beverages.</p>
+        <h2 class="dairy-header">Dairy</h2>
+        <img src="https://www.thedailymeal.com/img/gallery/are-eggs-actually-considered-dairy/l-intro-1664905977.jpg" class="responsive-image">
+        <p class="dairy-paragraph">Dairy products provide calcium, vitamin D, and other essential nutrients. They include milk, cheese, yogurt, and fortified soy beverages.</p>
     </div>
 
     <div class="food-group">
-        <h2>Fats & Oils</h2>
-        <p>Though they should be consumed sparingly, healthy fats and oils are necessary for absorbing vitamins and supporting cell growth. This group includes avocado, olive oil, nuts, and seeds.</p>
+        <h2 class="fats-and-oils-header">Fats & Oils</h2>
+        <img src="https://www.heartandstroke.ca/-/media/images/selection-of-healthy-fat-sources.jpg?rev=5ffb97d8127c46498e43e488bef69aac&la=en&h=1080&w=1920&hash=5FA343F06394BC6CBDEBAE934E56453D" class="responsive-image">
+        <p class="fats-and-oils-paragraph">Though they should be consumed sparingly, healthy fats and oils are necessary for absorbing vitamins and supporting cell growth. This group includes avocado, olive oil, nuts, and seeds.</p>
     </div>
-
-    <!-- You can add a navigation bar or back button -->
     <a href="/">Back to Home</a>
 
 </body>

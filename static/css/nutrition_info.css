@@ -1,0 +1,17 @@
+.responsive-image {
+    width: 100%; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+    max-width: 400px; /* You can change this to set the maximum width */
+    display: block;
+    margin: 0; /* Center the image */
+}
+
+body {
+    background-image: url('https://media.istockphoto.com/id/1222464321/vector/magnifying-glass-on-a-product-label-with-the-text-nutrition-facts-read-the-label-concept.jpg?s=612x612&w=0&k=20&c=Q7zWHCuiGcOyAUpOobo9F6tHH-iWioRRfE93bRPsJeY=');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    height: 100vh;
+}
