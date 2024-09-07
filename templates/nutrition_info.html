@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Nutrition Information</title>
-    <!-- Add any additional head elements here -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nutrition_info.css') }}">
+
 </head>
 <body>
     <h1>Nutrition Information</h1>
-
-    <!-- Form for user input -->
+    <!-- <img src="https://media.istockphoto.com/id/1222464321/vector/magnifying-glass-on-a-product-label-with-the-text-nutrition-facts-read-the-label-concept.jpg?s=612x612&w=0&k=20&c=Q7zWHCuiGcOyAUpOobo9F6tHH-iWioRRfE93bRPsJeY=" class="responsive-image"> -->
     <form method="post" action="{{ url_for('get_nutrition') }}">
         <label for="user_query">Enter food item:</label>
         <input type="text" id="user_query" name="user_query" required value="{{ request.form.get('user_query', '') }}">
         <button type="submit">Get Nutrition Info</button>
     </form>
 
-    <!-- Display nutrition data here -->
     {% if foods %}
     <div>
         <h2>Nutrition Data</h2>

@@ -1,0 +1,44 @@
+.responsive-image {
+    width: 100%;
+    height: auto; 
+    max-width: 400px; 
+    display: block;
+    margin: 0 auto;
+}
+
+h1, h2, p {
+    text-align: center;
+}
+
+body {
+    background-image: url('https://img.freepik.com/free-photo/vintage-clock_74190-5728.jpg?size=626&ext=jpg&ga=GA1.1.34264412.1699833600&semt=aispng');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    height: 100vh;
+}
+
+.background-overlay {
+    position: fixed; /* Overlay fixed similar to the background */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://img.freepik.com/free-photo/vintage-clock_74190-5728.jpg?size=626&ext=jpg&ga=GA1.1.34264412.1699833600&semt=aispng');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5; /* Adjust for desired fading */
+    z-index: -1; /* Ensures the overlay stays behind other content */
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    position: relative; /* Needed for the fixed positioning of the overlay */
+}
+
+
+

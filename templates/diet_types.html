@@ -1,39 +1,37 @@
-<!-- templates/diet_types.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Diet Types</title>
-    <!-- Link to your CSS file for styling -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/diet_types.css') }}">
 </head>
 <body>
     <h1>Different Types of Diets</h1>
     <p>Explore various diet plans and find out which one might be right for you:</p>
 
     <div class="diet-type">
-        <h2>Vegan Diet</h2>
-        <p>A vegan diet excludes all animal products, including meat, dairy, and eggs. It focuses on plant-based foods such as fruits, vegetables, grains, nuts, and seeds.</p>
+        <h2 class="vegan-header">Vegan Diet</h2>
+        <img src="https://clipart-library.com/2023/840-8406534_computer-icons-veganism-brand-logo-animal-vegan-clipart.png" class="responsive-image">
+        <p class="vegan-paragraph">A vegan diet excludes all animal products, including meat, dairy, and eggs. It focuses on plant-based foods such as fruits, vegetables, grains, nuts, and seeds.</p>
     </div>
 
     <div class="diet-type">
-        <h2>Ketogenic Diet</h2>
-        <p>The ketogenic diet is a high-fat, low-carbohydrate diet that aims to burn fat more efficiently by forcing the body into a state of ketosis.</p>
+        <h2 class="ketogenic-header">Ketogenic Diet</h2>
+        <img src="https://static.vecteezy.com/system/resources/previews/000/223/279/original/keto-diet-do-s-and-don-ts-vector.jpg" class="responsive-image">
+        <p class="ketogenic-paragraph">The ketogenic diet is a high-fat, low-carbohydrate diet that aims to burn fat more efficiently by forcing the body into a state of ketosis.</p>
     </div>
 
     <div class="diet-type">
-        <h2>Paleo Diet</h2>
-        <p>This diet is designed to resemble what human hunter-gatherer ancestors ate thousands of years ago. It includes lean meats, fish, fruits, vegetables, nuts, and seeds and excludes processed foods and grains.</p>
+        <h2 class="paleo-header">Paleo Diet</h2>
+        <img src="https://media.istockphoto.com/id/853500704/vector/paleo-icon-set.jpg?s=612x612&w=is&k=20&c=LBwmTOylhx8V1Syqt1jcZglaxfCVIDxABnnj93ie47E=" class="responsive-image">
+        <p class="paleo-paragraph">This diet is designed to resemble what human hunter-gatherer ancestors ate thousands of years ago. It includes lean meats, fish, fruits, vegetables, nuts, and seeds and excludes processed foods and grains.</p>
     </div>
 
     <div class="diet-type">
-        <h2>Mediterranean Diet</h2>
-        <p>Inspired by the eating habits of Greece and Italy, the Mediterranean diet emphasizes fruits, vegetables, whole grains, olive oil, fish, and moderate amounts of red wine.</p>
+        <h2 class="mediterranean-header">Mediterranean Diet</h2>
+        <img src="https://media.istockphoto.com/id/1411935911/vector/mediterranean-diet-set-of-foods.jpg?s=612x612&w=0&k=20&c=JTssy0TIHN5ltImoOVDT5aHWSBOOuth5LpkpC5b0MwE=" class="responsive-image">
+        <p class="mediterranean-paragraph">Inspired by the eating habits of Greece and Italy, the Mediterranean diet emphasizes fruits, vegetables, whole grains, olive oil, fish, and moderate amounts of red wine.</p>
     </div>
-
-    <!-- Add more diet types as necessary -->
-    
-    <!-- You can add a navigation bar or back button -->
     <a href="/">Back to Home</a>
 
 </body>
