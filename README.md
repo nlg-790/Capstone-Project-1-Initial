@@ -57,23 +57,6 @@ Last but not least as far as pages go, I have Nutrition Information. Here is whe
 
 As far as technology goes, this site is run on python. There is one file called app.py, which provides the routes for each HTML page. This was done on a macbook pro, so i activated the virtual environment to make the page. I also installed Flask to make it easier to navigate terminal and to make the website easier to run and put together. I used HTML for each page and I decorated each using CSS. 
 
-From flask import Flask imports the Flask class render_template renders the HTML files, request handles HTTP requests. Import os is imported to interact with the operating system. import requests is imported to make HTTP requests to the API. app = Flask(__name__) this is to make the flask class and for the site to run on flask. nutritionix_app_id = os.environ.get('NUTRITIONIX_APP_ID') and nutritionix_api_key = os.environ.get('NUTRITIONIX_API_KEY') both authenticate the API for use accross the site. if not (nutritionix_app_id and nutritionix_api_key): raise ValueError("Please set the NUTRITIONIX_APP_ID and NUTRITIONIX_API_KEY environment variables.") This checks if there is something not in the API key and if there isnt, an error is returned. app.config['DEBUG'] = True installs debug mode in flask and automatic reloads and better error messages. def get_nutrition_data(query): defines a function to make a POST request to the Nutritionix API.     url = "https://trackapi.nutritionix.com/v2/natural/nutrients"  sets the endpoint URL for the Nutritionix API. headers = { 'x-app-id': nutritionix_app_id, 'x-app-key': nutritionix_api_key, 'x-remote-user-id': '0', 'Content-Type': 'application/json' this creates a dictionary for the headers with the API ID and keys and adds a required header to identify the user. It also sets the content to JSON for the API. body = {'query': query} prepares the request body with the user's food query. response = requests.post(url, json=body, headers=headers)  makes a POST request to the API with the given URL, headers, and body. if response.status_code == 200:  this checks if the response status code is 200 (OK), indicating the request was successful. return response.json()  // this returns the response data in JSON format if the request is successful. else: return None this returns none if the request is not successful. @app.route('/')  defines a route for the root URL ('/'). return render_template('index.html') handles the request routes such as food-groups, diet-types and the rest of the html pages and renders their templates. For the get-nutrtion page, there were a few more steps. if request.method == 'GET': checks if the request method is GET. return render_template('nutrition_info.html') renders the 'nutrition_info.html' template if it is a GET request. elif request.method == 'POST': checks if the request is a POST request. user_query = request.form['user_query'] retreives the user's input (food item) from the form data. response = get_nutrition_data(user_query) calls the function to get nutrition data using the user's input. if response and 'foods' in response: checks if the response contains data and has the 'foods' key. foods = response['foods'] extracts the 'foods' data from the API response. return render_template('nutrition_info.html', foods=foods) renders the 'nutrition_info.html' template with the foods data. else:return "An error occurred", 400  returns an error message with a 400 status code if the API fails. if __name__ == '__main__': checks if the script is run directly (not imported as a module). app.run() runs the Flask application with the default settings.
-
-
-
-
-
-
-
-
-
-
-
-      
-
-
-
-
 Overall, my goal was to make my site welcoming and easy to navigate and read. I wanted to make the website make others feel good with the use of specific colors and images to make them feel more welcome. Also, organized so that each page emphasizes a certain topic. Talking about a healthy lifestyle can be daunting, and using the right structure, colors and images can make the topic more pleasant. 
 
 
